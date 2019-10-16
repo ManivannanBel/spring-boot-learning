@@ -1,0 +1,54 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Alien {
+
+	private int id;
+	private String name;
+	private String technology;
+	@Autowired
+	@Qualifier("lap")
+	private laptop laptop1;
+	
+	public laptop getLaptop1() {
+		return laptop1;
+	}
+	
+	public void setLaptop1(laptop laptop1) {
+		this.laptop1 = laptop1;
+	}
+	
+	public Alien() {
+		super();
+		System.out.println("Alien object instantiated...");
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getTechnology() {
+		return technology;
+	}
+	public void setTechnology(String technology) {
+		this.technology = technology;
+	}
+	@Override
+	public String toString() {
+		laptop1.show();
+		return "Alien [id=" + id + ", name=" + name + ", technology=" + technology + "]";
+		
+	}
+		
+}

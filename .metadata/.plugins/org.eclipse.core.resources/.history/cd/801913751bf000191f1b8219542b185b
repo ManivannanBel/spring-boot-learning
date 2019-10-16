@@ -1,0 +1,39 @@
+package com.example.demo;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class Alien {
+
+	int id;
+	String name;
+	String technology;
+	
+	public Alien() {
+		super();
+		System.out.println("Alien object instantiated...");
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getName() {
+		return name;
+	}
+	public void setName(int name) {
+		this.name = name;
+	}
+	public int getTechnology() {
+		return technology;
+	}
+	public void setTechnology(int technology) {
+		this.technology = technology;
+	}
+	@Override
+	public String toString() {
+		return "Alien [id=" + id + ", name=" + name + ", technology=" + technology + "]";
+	}
+		
+}
